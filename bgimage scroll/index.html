@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Size Change on Scroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header"></div>
+    <section>
+        <h2>Background Size Change into Small when Scrolling</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi feugiat pellentesque orci, et eleifend arcu aliquet egestas. Vivamus tempus vel elit in congue. Suspendisse lacinia quam non libero maximus, eget fringilla nibh feugiat. In pharetra commodo viverra. Praesent elementum erat non vehicula tempus. Nam placerat dolor quis tristique auctor. Nulla at sem ac leo interdum vulputate. Morbi magna libero, pretium nec pretium et, tempor nec eros.
+            Donec vel consequat nunc, nec dignissim quam. Donec sed faucibus felis. Proin pharetra odio elit, sed iaculis arcu rhoncus in. Aliquam erat volutpat. Aliquam diam dolor, varius sit amet aliquet ac, tempus et ipsum. Praesent dapibus justo in tellus pulvinar, ut pellentesque nisl tristique. Curabitur facilisis accumsan ligula at tincidunt. Cras mollis non nunc sit amet semper. Vivamus tellus sem, varius id cursus sed, elementum non erat. Curabitur elementum leo justo, eget consequat nunc lobortis non. Nullam feugiat est iaculis mattis suscipit. Mauris sagittis eros sit amet ultrices commodo.
+            Proin condimentum tellus ante, nec porttitor ipsum imperdiet commodo. Quisque ultricies blandit nibh quis mollis. Curabitur elementum, dui id pharetra fringilla, libero massa tempus augue, a vehicula dui urna nec turpis. Pellentesque auctor, urna aliquet rhoncus molestie, ligula massa blandit leo, sit amet vehicula lorem massa luctus mi. Fusce a metus at turpis congue fermentum. Proin erat lectus, dapibus in egestas a, convallis quis diam. Nunc eleifend magna eget lacus porttitor fermentum.<br/><br/>
+            Sed laoreet rhoncus lacus eget rutrum. Proin vel venenatis nisl. Suspendisse a elit feugiat, accumsan mauris facilisis, finibus tortor. Pellentesque neque mi, lobortis semper tempor nec, placerat eu orci. Cras auctor justo ut est tristique lobortis. Nulla quis imperdiet sem, egestas vestibulum ipsum. Integer fermentum justo eget accumsan molestie. Nam viverra dolor velit, in sagittis erat pellentesque ac. Duis ipsum arcu, varius a justo at, gravida pharetra nisl.
+            Praesent sed nisl id libero dictum rutrum et nec arcu. Curabitur ullamcorper consectetur sem at bibendum. In leo leo, pharetra in ornare ac, aliquet rutrum diam. Sed lobortis nibh et aliquet rutrum. Suspendisse at sapien et nisi pretium laoreet nec vitae massa. Pellentesque eget ante arcu. Donec neque nunc, molestie at sem at, maximus congue elit. Suspendisse potenti. Vivamus tempor, arcu ac laoreet facilisis, nibh sapien venenatis ligula, eget malesuada elit lorem vel libero. Phasellus vulputate ut felis id cursus. Nullam dapibus rutrum tellus vitae mattis.</p>
+    </section>
+
+    <script type="text/javascript">
+        const bg = document.getElementById('header');
+        window.addEventListener('scroll', function(){
+            bg.style.backgroundSize = 100 - +window.pageYOffset/50+'%';
+            bg.style.opacity = 1 - +window.pageYOffset/800;
+        });
+
+        //pageYOffset : scrollY와 같은 속성 
+        //문서가 수직으로 얼마나 스크롤 되었는지 px단위로 반환해준다.
+        //window.scrollY : 화면 Y축의 상단값
+        //scrollY + window.innerHehight : 화면 Y축의 하단값
+    </script>
+</body>
+</html>

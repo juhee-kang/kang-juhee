@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=Jua&family=Poppins:wght@200;300;400;500;600;800&display=swap');
+/* font-family: 'Jua', sans-serif; */
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+/* font-family: 'Langar', cursive; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+img{
+    display: block;
+    border: 0;
+}

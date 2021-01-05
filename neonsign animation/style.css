@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #07252d;
+}
+
+h2{
+    position: relative;
+    font-size: 6em;
+    letter-spacing: 15px;
+    color: #0e3742;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+    line-height: 0.70em;
+    outline: none;
+
+    animation-name: animate;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate{
+    0%{
+        color: #0e3742;
+        text-shadow: none;
+    }
+    100%{
+        color: #fff;
+        text-shadow: 0 0 10px #03bcff,
+                    0 0 20px #03bcff,
+                    0 0 40px #03bcff,
+                    0 0 80px #03bcff,
+                    0 0 160px #03bcff;
+    }
+}

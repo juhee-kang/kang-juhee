@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffaabb;
+    display: flex;
+}
+
+.container .imgBx{
+    position: relative;
+    width: 450px;
+    height: 100%;
+    background-image: url(img/img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .countdownBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: calc(100% - 450px);
+}
+
+.container .countdownBox h2{
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.container .countdownBox h2 span{
+    font-size: 6em;
+    font-weight: 700;
+}
+
+.container .countdownBox h2 span i{
+    font-style: initial;
+    color: #cc77cc;
+}
+
+.container .countdownBox .countdown{
+    margin-top: 30px;
+    background-color: rgba(255,255,255,0.1);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .countdownBox .countdown div{
+    position: relative;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin: 0 15px;
+    margin-top: -25px;
+}
+
+.container .countdownBox .countdown div::before{
+    content: 'text';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    color: #fff;
+    font-size: 0.35em;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.container .countdownBox .countdown #day::before{
+    content: 'Days';
+}
+
+.container .countdownBox .countdown #hour::before{
+    content: 'Hours';
+}
+
+.container .countdownBox .countdown #minute::before{
+    content: 'Minutes';
+}
+
+.container .countdownBox .countdown #second::before{
+    content: 'Seconds';
+}
+
+.container .countdownBox .countdown #second,
+.container .countdownBox .countdown #second::before{
+    color: #cc77cc;
+}
+
+@media (max-width :991px){
+    .container .imgBx{
+        display: none;
+    }
+
+    .container .countdownBox{
+        width: 100%;
+    }
+}
+
+@media (max-width : 600px){
+    .container .countdownBox h2 {
+        font-size: 1.1em;
+    }
+
+    .container .countdownBox .countdown {
+        height: 100px;
+    }
+    
+    .container .countdownBox .countdown div {
+        width: 80px;
+        font-size: 2em;
+        margin: 0;
+        margin-top: -25px;
+    }
+}

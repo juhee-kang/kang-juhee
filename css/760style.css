@@ -672,6 +672,12 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
     }
+
+    footer .caution{
+        font-size: 0.75em;
+        margin-top: 30px;
+        color: #f5efea;
+    }
     
     
     
